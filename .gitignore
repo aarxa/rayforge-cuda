@@ -1,0 +1,4 @@
+rayforge_gpu
+rayforge_cpu
+*.bmp
+.ipynb_checkpoints/
