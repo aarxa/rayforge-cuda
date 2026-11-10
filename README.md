@@ -6,7 +6,7 @@ refraction) running one CUDA thread per pixel over a binned-SAH BVH, checked pix
 RayForge's own output.
 
 ## Results
-See [RESULTS.md](RESULTS.md).
+On a Tesla T4, 1080p: dragon (500K triangles) in **18.9 ms**, buddha (868K) in **21.3 ms**: **24x and 47x faster** than the original RayForge on 12 M4 Pro cores, with 0.03% of pixels differing from its output. About 10x of that comes from the BVH and data layout (same CPU, 1 thread); the GPU adds ~2x over the optimized CPU port. Full tables: [RESULTS.md](RESULTS.md).
 
 ## How it works
 - `src/trace.h`: the ray tracer, written once as `__host__ __device__` code and compiled for both

@@ -45,7 +45,8 @@ next step and a good interview discussion.
 
 ## 7. Where the speed comes from (be honest about this in interviews)
 - RayForge 1 thread → port 1 thread (same CPU): about **10x**, all from data layout and the BVH.
-- Port, 12 CPU threads → T4 GPU: the GPU share. See RESULTS.md.
+- Port, 12 M4 Pro threads → T4 GPU: about **2x** (39 → 18.9 ms on dragon). See RESULTS.md.
+- Original RayForge, 12 threads → T4: **24x / 47x** (dragon / buddha).
 Saying "most of my first 10x was algorithmic" is a strong answer; it shows you measured.
 
 ## Next steps
